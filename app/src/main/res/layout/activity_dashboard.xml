@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardActivity">
+
+    <View
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:text="Calculator"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="@id/toolbar"
+        app:layout_constraintTop_toTopOf="@id/toolbar" />
+
+
+    <TextView
+        android:id="@+id/prev_tv"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="10dp"
+        android:paddingBottom="10dp"
+        android:paddingEnd="5dp"
+        android:gravity="end|bottom"
+        android:text=""
+        android:inputType="number"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <TextView
+        android:id="@+id/sign_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:paddingBottom="10dp"
+        android:paddingEnd="5dp"
+        android:gravity="end|bottom"
+        android:text=""
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/prev_tv" />
+
+    <TextView
+        android:id="@+id/ans_tv"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:paddingBottom="10dp"
+        android:paddingEnd="5dp"
+        android:gravity="end|bottom"
+        android:text=""
+        android:inputType="number"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_tv" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="5"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ans_tv">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ac"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:text="AC"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:src="@drawable/back_icon"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/percent"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:src="@drawable/percent_icon"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/divide"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:src="@drawable/divide_icon"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/seven_txt"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:text="7"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/eight_txt"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:text="8"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nine_txt"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:text="9"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/multiply"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:src="@drawable/multiply_icon"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/four_txt"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:text="4"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/five_txt"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:text="5"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/six_txt"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:text="6"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/minus"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:src="@drawable/minus_icon"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/one_txt"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:text="1"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/two_txt"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:text="2"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/three_txt"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:text="3"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/add"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:src="@drawable/add_icon"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/zero_txt"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:text="0"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/point_txt"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:text="."
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/equal"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:layout_columnSpan="2"
+            android:src="@drawable/equal_icon"
+            android:textSize="20sp" />
+
+
+
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
